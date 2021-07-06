@@ -1,0 +1,62 @@
+<h2>Products Works!</h2><hr>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <div>
+  <table border="2" style="width: 100%; height: 100%;">
+    <tr>
+        <td colspan="3">
+        <input type="text" class="form-control" placeholder="Search Product Name" [(ngModel)]="filteredString"/>
+        </td>
+        <td colspan="2">
+            <select  class="form-control" [(ngModel)]='sortby'> 
+                <option [value]='1'>
+                    SortbyName
+                </option>
+                <option [value]='2'>
+                    SortbyPrice
+                </option>
+                
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <th class="bg-primary text-white">
+            Product Id
+        </th>
+        <th class="bg-primary text-white">
+            Product Name
+        </th>
+        <th class="bg-primary text-white">
+            Product Price
+        </th>
+        <th class="bg-primary text-white">
+            Product Descrption
+        </th>
+        <th class="bg-primary text-white">
+            Product Img
+        </th>
+    </tr>
+    <tr appMycolor *ngFor="let product of products | searchpipe:filteredString | sortpipe:sortby">
+
+        <td class="my">
+            {{product.productId}}
+     </td>
+     <td class="my">
+         {{product.productName | titlecase}}
+  </td>
+  <td class="my">
+     {{product.productPrice | currency:'INR'}}
+</td>
+<td class="my">
+ {{product.productDescrption | lowercase}}
+</td>
+<td class="my">
+ <img [src]="product.productImg" height="90px" width="110px">
+</td>
+ </tr>
+</table>
+</div>
+{{errMsg | json}}

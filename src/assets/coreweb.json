@@ -1,0 +1,5 @@
+[
+    {"courseId":105, "courseName":"hypertext markup language","coursePrice":4000,"courseDescrption":"HTML training for 25 days","courseImg":"assets/images/html.png"},
+    {"courseId":106, "courseName":"cascading style sheets","coursePrice":5000,"courseDescrption":"CSS training for 15 days","courseImg":"assets/images/css.png"},
+    {"courseId":107, "courseName":"java script","coursePrice":6000,"courseDescrption":"java script training for 20 days","courseImg":"assets/images/js.png"}
+]

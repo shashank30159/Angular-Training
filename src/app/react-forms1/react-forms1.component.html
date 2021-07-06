@@ -1,0 +1,28 @@
+<h2>Reactvie Forms</h2><hr>
+<div class="container">
+<form [formGroup]='addressForm' (ngSubmit)='submitData()'>
+    <div class='form-group'>
+        <label>Name</label>
+        <input type='text' formControlName='Name' class='form-control'>
+    </div>
+    <div formGroupName="address">
+    <div class="form-group">
+    <label>City</label>
+        <input type='text' formControlName='City' class='form-control'>
+        <label>Postal code</label>
+        <input type='text' formControlName='Postalcode' class='form-control'>
+    </div>
+    </div>
+        <div *ngIf="addressForm.get('Name')?.invalid && addressForm.get('Name')?.touched"></div>
+        <div *ngIf="addressForm.get('Name')?.errors?.required" class='text text-danger'>Name is required</div>
+        <div *ngIf="addressForm.get('Name')?.errors?.pattern" class='text text-danger'>Invalid Name (It must be b/w 5 to 9) </div>
+        <div *ngIf="addressForm.get('City')?.invalid && addressForm.get('City')?.touched"></div>
+        <div *ngIf="addressForm.get('City')?.errors?.required" class='text text-danger'>Name of city is required</div>
+        <div *ngIf="addressForm.get('City')?.errors?.pattern" class='text text-danger'>Invalid city (It must be b/w 5 to 9) </div>
+        <div *ngIf="addressForm.get('Postalcode')?.invalid && addressForm.get('Postalcode')?.touched"></div>
+        <div *ngIf="addressForm.get('Postalcode')?.errors?.required" class='text text-danger'>Postalcode is required</div>
+        <div *ngIf="addressForm.get('Postalcode')?.errors?.pattern" class='text text-danger'>Invalid Postalcode (It must 6) </div>
+    
+    <button [disabled]='!addressForm.valid' type='submit' class='btn btn-success'>Submit</button>
+</form>
+</div>

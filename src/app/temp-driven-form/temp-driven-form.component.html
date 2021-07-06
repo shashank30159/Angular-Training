@@ -1,0 +1,70 @@
+<div class="container">
+    <h2>RegistrationForm</h2><hr>
+    <form #userForm ='ngForm' (ngSubmit)='submitData(userForm.value)'>
+        <div class='form-group'>
+            <label>Name</label><input 
+            type='text' 
+            #nameRef='ngModel' 
+            class='form-control' 
+            name='uname' 
+            ngModel
+            required
+            minlength="5"
+            maxlength="9"
+            pattern="[a-z]+"
+            >
+        </div>
+        <div ngModelGroup='Address'>
+          <div class='form-group'>
+           <label>City</label><input 
+            type='text' 
+            #cityRef='ngModel' 
+            class='form-control' 
+            name='city' 
+            ngModel
+            required
+            minlength="3"
+            maxlength="15"
+            pattern="[a-zA-Z]+"
+            >
+           
+          </div>
+
+          <div class='form-group'>
+            <label>PostalCode</label><input 
+            type='text' 
+            #pcRef='ngModel' 
+            class='form-control' 
+            name='postalCode' 
+            ngModel
+            required
+            minlength="6"
+            maxlength="6"
+            pattern="[1-9]+"
+            >
+          </div>
+        </div>
+        <div *ngIf='nameRef.errors && (nameRef.touched || nameRef.dirty)' class='text text-danger'>
+
+            <div [hidden]='!nameRef.errors.required'>Please enter name</div>
+            <div [hidden]='!nameRef.errors.minlength'>Please enter atlest 5 characters</div>
+            <div [hidden]='!nameRef.errors.pattern'>Invalid User name</div>
+
+        </div>
+        <div *ngIf='cityRef.errors && (nameRef.touched || nameRef.dirty)' class='text text-danger'>
+
+            <div [hidden]='!cityRef.errors.required'>Please enter address</div>
+            <div [hidden]='!cityRef.errors.minlength'>Invalid City</div>
+            <div [hidden]='!cityRef.errors.pattern'>Invalid City</div>
+
+        </div>
+        <div *ngIf='pcRef.errors && (nameRef.touched || nameRef.dirty)' class='text text-danger'>
+
+            <div [hidden]='!pcRef.errors.required'>Please enter Postal Code</div>
+            <div [hidden]='!pcRef.errors.minlength'>Please enter valid Postal Code</div>
+           
+
+        </div>
+        <button [disabled]='!userForm.form.valid' type='submit' class='btn btn-success'>Submit</button>
+    </form>
+</div>

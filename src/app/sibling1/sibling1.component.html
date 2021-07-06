@@ -1,0 +1,7 @@
+<h2 appMycolor>sibling1 works!</h2><hr>
+<table>
+<tr *ngFor='let customer of customers'>
+<td>{{customer.empId}} , {{customer.empName}} ,{{customer.salary}}</td>
+</tr>
+</table>
+<button class="btn btn-success" (click)='modifiedData()'>Click Here</button>

@@ -1,0 +1,57 @@
+<h2>Adv Java Courses Works!</h2><hr>
+  <div>
+  <table border="2" style="width: 100%; height: 100%;">
+    <tr>
+        <td colspan="3">
+        <input type="text" class="form-control" placeholder="Search Course Name" [(ngModel)]="filteredString"/>
+        </td>
+        <td colspan="2">
+            <select  class="form-control" [(ngModel)]='sortby'> 
+                <option [value]='1'>
+                    SortbyName
+                </option>
+                <option [value]='2'>
+                    SortbyPrice
+                </option>
+                
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <th class="bg-primary text-white">
+            Course Id
+        </th>
+        <th class="bg-primary text-white">
+            Course Name
+        </th>
+        <th class="bg-primary text-white">
+            Course Price
+        </th>
+        <th class="bg-primary text-white">
+            Course Descrption
+        </th>
+        <th class="bg-primary text-white">
+            Course Img
+        </th>
+    </tr>
+    <tr appMycolor *ngFor="let Course of courses | coursesearch:filteredString | coursesort:sortby">
+
+        <td class="mycolor">
+            {{Course.courseId}}
+     </td>
+     <td class="mycolor">
+         {{Course.courseName | titlecase}}
+  </td>
+  <td class="mycolor">
+     {{Course.coursePrice | currency:'INR'}}
+</td>
+<td class="mycolor">
+ {{Course.courseDescrption | lowercase}}
+</td>
+<td class="mycolor">
+ <img [src]="Course.courseImg" height="90px" width="110px">
+</td>
+ </tr>
+</table>
+</div>
+{{errMsg | json}}

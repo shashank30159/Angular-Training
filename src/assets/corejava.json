@@ -1,0 +1,6 @@
+[
+    {"courseId":101, "courseName":"core java","coursePrice":15000,"courseDescrption":"core java training for 45 days","courseImg":"assets/images/corejava.jpg"},
+    {"courseId":101, "courseName":"jdbc","coursePrice":15000,"courseDescrption":"jdbc training for 45 days","courseImg":"assets/images/jdbc.png"},
+    {"courseId":101, "courseName":"hibernate","coursePrice":15000,"courseDescrption":"hibernate training for 45 days","courseImg":"assets/images/hibernate.png"}
+    
+]

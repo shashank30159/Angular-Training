@@ -1,0 +1,7 @@
+  [
+    {"productId":101, "productName":"football","productPrice":5000,"productDescrption":"the product is football","productImg":"assets/images/foodball.jpg"},
+    {"productId":102, "productName":"mobile","productPrice":60000,"productDescrption":"the product is one plus mobile","productImg":"assets/images/mobile.jpg"},
+    {"productId":103, "productName":"television","productPrice":56000,"productDescrption":"the product is television","productImg":"assets/images/tv.png"},
+    {"productId":104, "productName":"camara","productPrice":40000,"productDescrption":"the product is canon camara","productImg":"assets/images/Camara.jpg"}
+    
+  ]

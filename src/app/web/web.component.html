@@ -1,0 +1,31 @@
+<h2>Web Component</h2><hr>
+<body>
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div class="card" style="width:200px">
+            <img class="card-img-top" src="assets/images/coreweb.png" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Core Web Technologies</h4>
+              <p class="card-text">In this course you will traine HTML,CSS,Js </p>
+         
+              <a [routerLink] = "['coreweb']" routerLinkActive='active' class="btn btn-primary">Enrol Now</a>
+            </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <div class="card" style="width:200px">
+            <img class="card-img-top" src="assets/images/advweb.png" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Advance Web Technologies</h4>
+              <p class="card-text">In this course you will traine AngularJS,NodeJS,ReactJS </p>
+         
+              <a [routerLink] = '["advweb"]' routerLinkActive='active' class="btn btn-primary">Enrol Now</a>
+            </div>
+          
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<router-outlet></router-outlet>
