@@ -25,7 +25,7 @@ import { Child1Component } from './child1/child1.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { WebComponent } from './web/web.component';
-import { JavaComponent } from './java/java.component';
+
 import { routingComponents, TechRoutingModule } from './tech-routing/tech-routing.module';
 import { CoursesortPipe } from './mypipes/coursesort.pipe';
 import { CoursesearchPipe } from './mypipes/coursesearch.pipe';
@@ -38,6 +38,8 @@ import { CorejavaComponent } from './corejava/corejava.component';
 import { CorewebComponent } from './coreweb/coreweb.component';
 import { ReactFormsComponent } from './react-forms/react-forms.component';
 import { ReactForms1Component } from './react-forms1/react-forms1.component';
+import { HomeComponent } from './home/home.component';
+import { JavaComponent } from './java/java.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,6 @@ import { ReactForms1Component } from './react-forms1/react-forms1.component';
     FirstComponent,
     SecondComponent,
     WebComponent,
-    JavaComponent,
     routingComponents,
     CoursesortPipe,
     CoursesearchPipe,
@@ -75,7 +76,8 @@ import { ReactForms1Component } from './react-forms1/react-forms1.component';
     CorejavaComponent,
     CorewebComponent,
     ReactFormsComponent,
-    ReactForms1Component
+    ReactForms1Component,
+    HomeComponent
 
   ],
   imports: [

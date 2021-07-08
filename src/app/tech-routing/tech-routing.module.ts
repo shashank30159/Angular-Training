@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { WebComponent } from '../web/web.component';
-import { JavaComponent } from '../java/java.component';
 import { ProductsComponent } from '../products/products.component';
 import { CorejavaComponent } from '../corejava/corejava.component';
 import { AdvjavaComponent } from '../advjava/advjava.component';
@@ -10,7 +9,10 @@ import { CorewebComponent } from '../coreweb/coreweb.component';
 import { AdvwebComponent } from '../advweb/advweb.component';
 import { TempDrivenFormComponent } from '../temp-driven-form/temp-driven-form.component';
 import { ReactForms1Component } from '../react-forms1/react-forms1.component';
+import { HomeComponent } from '../home/home.component';
+import { JavaComponent } from '../java/java.component';
 const routes:Routes = [
+  {path:'Home', component:HomeComponent },
   {path:'web', component:WebComponent, 
   children:[
     {path:'coreweb', component:CorewebComponent },

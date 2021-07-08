@@ -7,7 +7,4 @@ import { WebService } from '../services/web.service';
   styleUrls: ['./web.component.css']
 })
 export class WebComponent  {
-
-  
-
 }

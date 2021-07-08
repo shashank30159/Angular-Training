@@ -1,6 +1,6 @@
 [
-    {"courseId":108, "courseName":"angular","coursePrice":15000,"courseDescrption":"angular training for 50 days","courseImg":"assets/images/angular.jpg"},
-    {"courseId":108, "courseName":"node js","coursePrice":17000,"courseDescrption":"nodejs training for 50 days","courseImg":"assets/images/nodejs.png"},
-    {"courseId":108, "courseName":"react js","coursePrice":20000,"courseDescrption":"reactjs training for 50 days","courseImg":"assets/images/reactjs.png"}
+    {"courseId":110, "courseName":"angular","coursePrice":15000,"courseDescrption":"angular training for 50 days","courseImg":"assets/images/angular.jpg"},
+    {"courseId":111, "courseName":"node js","coursePrice":17000,"courseDescrption":"nodejs training for 50 days","courseImg":"assets/images/nodejs.png"},
+    {"courseId":112, "courseName":"react js","coursePrice":20000,"courseDescrption":"reactjs training for 50 days","courseImg":"assets/images/reactjs.png"}
 
 ]
